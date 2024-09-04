@@ -1,0 +1,44 @@
+﻿<Window x:Class="Практическая_21__2_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практическая_21__2_"
+        mc:Ignorable="d"
+        Title="БЛЕСТЯЩАЯ ПРОГРАММА" Height="473" Width="800" Background="#d2bcc8" ResizeMode="CanMinimize">
+    <Grid>
+        <Image Margin="492,10,12,142" Source="ef1c8acba1731035151348a74a8d8a3e.jpg" Stretch="Fill"/>
+        <DataGrid  x:Name="Datagrid" HorizontalAlignment="Left" Height="208" Margin="10,27,0,0" VerticalAlignment="Top" Width="459" Background="#decbd5" BorderBrush="#decbd5" Foreground="#4d3344" CellEditEnding="CellEditEnding"/>
+        <GroupBox Header="Матрица" HorizontalAlignment="Left" Height="186" Margin="10,248,0,0" VerticalAlignment="Top" Width="370" FontSize="14" Foreground="#4d3344" >
+            <Grid Margin="0,0,0,15">
+                <Button Click="Sosdat" Content="Создать" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="338" Height="33" Background="#FF953C50" BorderBrush="#FF953C50" Foreground="#FFDDB0B7"/>
+                <TextBox x:Name="Stolb" HorizontalAlignment="Left" Height="45" Margin="10,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151" Background="#FFD4A1A8" BorderBrush="#FFD4A1A8" />
+                <TextBox x:Name="Stroka" HorizontalAlignment="Left" Height="45" Margin="197,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151" Background="#FFD4A1A8" BorderBrush="#FFD4A1A8" />
+                <Label Content="Количество столбцов" HorizontalAlignment="Left" VerticalAlignment="Top" Width="151" Margin="4,-1,0,0" Foreground="#4d3344"/>
+                <Label Content="Количество строк" HorizontalAlignment="Left" Margin="191,-1,0,0" VerticalAlignment="Top" Width="151" Foreground="#4d3344"/>
+                <Button Click="Zapolnit" Content="Заполнить" HorizontalAlignment="Left" Margin="10,115,0,-3" VerticalAlignment="Top" Width="338" Height="33" Background="#FF953C50" BorderBrush="#FF953C50" Foreground="#FFDDB0B7"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Решение" HorizontalAlignment="Left" Height="184" Margin="396,250,0,0" VerticalAlignment="Top" Width="386" FontSize="14" Foreground="#4d3344">
+            <Grid>
+                <TextBox IsReadOnly="True" x:Name="rez" HorizontalAlignment="Left" Height="46" Margin="12,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="354" Background="#FFD4A1A8" BorderBrush="#FFD4A1A8" />
+                <Button Click="Reashenie" Content="Решение" HorizontalAlignment="Left" Margin="12,74,0,0" VerticalAlignment="Top" Width="354" Height="33" Background="#FF953C50" BorderBrush="#FF953C50" Foreground="#FFDDB0B7"/>
+                <Button Click="Otshistit" Content="Очистить" HorizontalAlignment="Left" Margin="12,115,0,0" VerticalAlignment="Top" Width="354" Height="33" Background="#FF953C50" BorderBrush="#FF953C50" Foreground="#FFDDB0B7"/>
+            </Grid>
+        </GroupBox>
+        <Grid>
+            <Menu VerticalAlignment="Top" Background="#d0cad6">
+                <MenuItem Header="Матрица" Foreground="#4d3344">
+                    <MenuItem Header="Создать" Background="#FFD0CAD6" BorderBrush="#FFD0CAD6" Foreground="#4d3344" />
+                    <MenuItem Header="Решение" Background="#FFD0CAD6" BorderBrush="#FFD0CAD6" Foreground="#4d3344"/>
+                    <Separator Foreground="#4d3344"/>
+                    <MenuItem Header="Очистить" Background="#FFD0CAD6" BorderBrush="#FFD0CAD6" Foreground="#4d3344"/>
+                </MenuItem>
+                <MenuItem Header="Сохранить"  Foreground="#4d3344" Click="Save_Click"/>
+                <MenuItem Header="Открыть"  Foreground="#4d3344" Click="Open_Click"/>
+                <MenuItem Header="О программе" Foreground="#4d3344" Click="Proga_Inf"/>
+                <MenuItem Header="Выход" Foreground="#4d3344" Click="Exit"/>
+            </Menu>
+        </Grid>
+    </Grid>
+</Window>
